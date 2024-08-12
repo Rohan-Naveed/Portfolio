@@ -538,7 +538,7 @@ header nav .title:hover .customText {
   gap: 15px;
   list-style: none;
   color: var(--primary-color);
-  font-size: 1.1vw;
+  font-size: 17px;
 }
 
 .projectSection .projectFlex {
@@ -802,7 +802,7 @@ footer {
 
 /* TOPIC Responsiveness */
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   /* SECTION Footer */
 
   .footerGrid .footerInfoContainer p {
@@ -834,9 +834,9 @@ footer {
 
   /* SECTION Contact */
 
-  /* .contactSection h1 {
+  .contactSection h1 {
     font-size: 35px;
-  } */
+  }
 
   .contactSection {
     height: auto;
@@ -848,7 +848,7 @@ footer {
 
   /* SECTION Project */
 
-  /* .projectSection h1 {
+  .projectSection h1 {
     font-size: 35px;
   }
 
@@ -866,14 +866,14 @@ footer {
 
   .projectSection .projectFlex ul {
     font-size: 12px;
-  } */
+  }
 
   .projectSection {
     grid-template-columns: 1fr 1fr;
   }
 
   /* SECTION Resume */
-  /* 
+
   .resumeSection h1 {
     font-size: 35px;
   }
@@ -897,14 +897,14 @@ footer {
   .resumeSection .resumeFlex .skillsBox .skills h3 {
     font-size: 13px;
   }
-  
+
   .resumeSection .resumeFlex .skillsBox .skills i {
     font-size: 60px;
-  } */
+  }
 
   /* SECTION About */
 
-  /* #aboutSection .aboutSection .aboutText h1 {
+  #aboutSection .aboutSection .aboutText h1 {
     font-size: 35px;
   }
 
@@ -915,10 +915,10 @@ footer {
   #aboutSection .statsContainer .statBox h2 {
     font-size: 35px;
   }
-  
+
   #aboutSection .statsContainer .statBox p {
     font-size: 13px;
-  } */
+  }
 
   #aboutSection {
     height: auto;
@@ -943,7 +943,7 @@ footer {
 
   /* SECTION Banner */
 
-  /* .contentSection .heroText .btnBox .seeProjectsBtn {
+  .contentSection .heroText .btnBox .seeProjectsBtn {
     font-size: 13px;
   }
 
@@ -957,7 +957,7 @@ footer {
 
   .contentSection .heroText .btnBox .cvBtn {
     font-size: 13px;
-  } */
+  }
 
   .contentSection {
     height: 100vh;
@@ -1013,8 +1013,346 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media only screen and (max-width: 767px) and (min-width: 320px) {
   /* SECTION Navbar */
+
+  header {
+    height: auto;
+    padding: 12px 0px 15px 0px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  header nav .title a {
+    font-size: 20px;
+  }
+
+  header nav .links a:link,
+  header nav .links a:visited {
+    font-size: 12px;
+  }
+
+  header nav .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* SECTION Banner */
+
+  .contentSection .heroText h1 {
+    font-size: 25px;
+  }
+
+  .contentSection .heroText h2 {
+    font-size: 16px;
+  }
+
+  .contentSection .heroText p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .contentSection .heroText .socialIcons i {
+    font-size: 16px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn {
+    font-size: 11px;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 12px;
+  }
+
+  .contentSection {
+    display: flex;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .contentSection .heroText {
+    align-items: center;
+  }
+
+  .contentSection .heroText .socialIcons {
+    gap: 18px;
+  }
+
+  .contentSection .heroText .btnBox {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn {
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection .heroImage img {
+    display: none;
+  }
+
+  /* SECTION About */
+
+  #aboutSection .aboutSection .aboutText h1 {
+    font-size: 25px;
+  }
+
+  #aboutSection .aboutSection .aboutText p {
+    font-size: 12px;
+  }
+
+  #aboutSection .statsContainer .statBox h2 {
+    font-size: 28px;
+  }
+
+  #aboutSection .statsContainer .statBox p {
+    font-size: 11px;
+  }
+
+  #aboutSection .aboutSection .aboutText h1 i {
+    font-size: 23px;
+  }
+
+  #aboutSection {
+    padding: 25px 15px 25px 15px;
+  }
+
+  #aboutSection .aboutSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutSection .aboutSection .aboutImg img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #aboutSection .statsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+  }
+
+  /* SECTION Resume */
+
+  .resumeSection h1 {
+    font-size: 25px;
+  }
+
+  .resumeSection .resumeFlex h2 {
+    font-size: 16px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox h3 {
+    font-size: 10px;
+  }
+  .resumeSection .resumeFlex .resumeBox h4 {
+    font-size: 13px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox ul li {
+    font-size: 12px;
+  }
+
+  .resumeSection .resumeFlex p {
+    font-size: 12px;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills h3 {
+    font-size: 9px;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills i {
+    font-size: 33px;
+  }
+
+  .resumeSection {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 30px 15px;
+    gap: 50px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resumeSection .resumeFlex .skillsBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills {
+    border-radius: 10px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .resumeBtnBox {
+    display: none;
+  }
+
+  /* SECTION Projects */
+
+  .projectSection {
+    padding: 25px 15px 25px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectSection hr {
+    width: 100%;
+  }
+
+  .projectSection h1 {
+    font-size: 25px;
+  }
+
+  .projectSection .projectFlex h2 {
+    font-size: 30px;
+  }
+  .projectSection .projectFlex h3 {
+    font-size: 17px;
+  }
+
+  .projectSection .projectFlex p {
+    font-size: 12px;
+  }
+
+  .projectSection .projectFlex ul li {
+    font-size: 12px;
+  }
+
+  .projectSection .projectFlex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectSection .projectFlex .projectLinkBox i {
+    font-size: 28px;
+  }
+
+  .projectSection .projectFlex video {
+    width: 100%;
+    height: 150px;
+  }
+
+  /* SECTION Contact */
+
+  .contactSection h1 {
+    font-size: 25px;
+  }
+
+  .contactSection form {
+    width: 100%;
+  }
+
+  .contactSection form .inputContainer i {
+    font-size: 13px;
+  }
+
+  .contactSection form .inputContainer .textAreaIcon {
+    font-size: 13px;
+  }
+
+  .contactSection form .inputContainer .inputFieldName::placeholder {
+    font-size: 10px;
+    transform: translateX(80px);
+  }
+  .contactSection form .inputContainer .inputFieldPhone::placeholder {
+    font-size: 10px;
+    transform: translateX(67px);
+  }
+  .contactSection form .inputContainer .inputFieldEmail::placeholder {
+    font-size: 10px;
+    transform: translateX(88px);
+  }
+
+  .contactSection form .inputContainer .inputField:focus::placeholder {
+    font-size: 10px;
+  }
+
+  .contactSection form .inputContainer .textArea::placeholder {
+    font-size: 10px;
+    transform: translate(76px, 57px);
+  }
+
+  .contactSection form .submitBtn {
+    font-size: 12px;
+  }
+
+  /* SECTION FOOTER  */
+
+  .footerGrid .footerInfoContainer p {
+    font-size: 10px;
+  }
+
+  .footerGrid .footerLinkContainer a {
+    font-size: 10px;
+  }
+
+  .footerGrid .footerInfoContainer i {
+    font-size: 15px;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .footerGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerGrid .footerLinkContainer {
+    margin-top: 10px;
+    text-align: center;
+    gap: 9px 0px;
+  }
+}
+
+@media (max-width: 320px) and (min-width: 0px) {
+  /* SECTION Navbar */
+
+  header {
+    height: auto;
+    padding: 12px 0px 15px 0px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
   header nav .title a {
     font-size: 20px;
@@ -1303,5 +1641,19 @@ footer {
 
   .footerGrid .footerInfoContainer i {
     font-size: 15px;
+  }
+  footer {
+    height: auto;
+  }
+
+  .footerGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerGrid .footerLinkContainer {
+    margin-top: 10px;
+    text-align: center;
+    gap: 9px 0px;
   }
 }
