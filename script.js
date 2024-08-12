@@ -1,12 +1,5 @@
 "use strict";
 
-var typed = new Typed(".typing", {
-  strings: ["Front-End Developer.", "Web Designer.", "Programmer."],
-  typeSpeed: 175,
-  backSpeed: 175,
-  loop: true,
-});
-
 const form = document.querySelector("form");
 const senderFullName = document.getElementById("name");
 const senderPhone = document.getElementById("phone");
@@ -14,6 +7,15 @@ const senderEmail = document.getElementById("email");
 const senderMessage = document.getElementById("message");
 const allSections = document.querySelectorAll(".section");
 
+// Auto Typing
+var typed = new Typed(".typing", {
+  strings: ["Front-End Developer.", "Web Designer.", "Programmer."],
+  typeSpeed: 175,
+  backSpeed: 175,
+  loop: true,
+});
+
+// Email Send Functionality
 function sendEmail() {
   let msgString = `<h1>Sender's Full Name :</h1>  ${senderFullName.value} <br>
                   <h1>Sender's Phone :</h1>  ${senderPhone.value} <br>
@@ -37,7 +39,7 @@ form.addEventListener("submit", (e) => {
   sendEmail();
 });
 
-// TOPIC Reveal section on scroll
+// Reveal section on scroll
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
