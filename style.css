@@ -135,7 +135,7 @@ header nav .title:hover .customText {
 
 .contentSection {
   box-shadow: 0px 0px 5px -2px var(--primary-color);
-  padding: 0px 30px;
+  padding: 50px 30px 0px 30px;
   height: 87vh;
   background-color: var(--bg-color);
   display: grid;
@@ -620,19 +620,6 @@ header nav .title:hover .customText {
   border: 1.5px solid var(--primary-color);
 }
 
-.projectSection .projectSection .projectBtnBox {
-  align-self: center;
-  justify-self: flex-start;
-}
-
-.projectSection .projectBtn {
-  color: var(--bg-color);
-  background-color: var(--primary-color);
-  padding: 10px 40px;
-  border-radius: 40px;
-  font-weight: bold;
-}
-
 /* SECTION Contact */
 
 .contactSection {
@@ -858,15 +845,15 @@ footer {
   /* SECTION Footer */
 
   .footerGrid .footerInfoContainer p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .footerGrid .footerLinkContainer a {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .footerGrid .footerInfoContainer i {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   footer {
@@ -887,37 +874,57 @@ footer {
   /* SECTION Contact */
 
   .contactSection h1 {
-    font-size: 35px;
+    font-size: 30px;
+    color: var(--primary-color);
+  }
+
+  .contactSection form .submitBtn:active {
+    box-shadow: 0px 0px 10px var(--primary-color);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .contactSection form .submitBtn:hover {
+    box-shadow: none;
+    opacity: 1;
+    transform: scale(1);
   }
 
   .contactSection {
     height: auto;
   }
 
-  .contactSection h1 {
-    color: var(--primary-color);
-  }
-
   /* SECTION Project */
 
   .projectSection h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .projectSection .projectFlex h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .projectSection .projectFlex h3 {
-    font-size: 17px;
-  }
-
-  .projectSection .projectFlex p {
     font-size: 15px;
   }
 
+  .projectSection .projectFlex p {
+    font-size: 13px;
+  }
+
   .projectSection .projectFlex ul {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .projectSection .projectFlex .projectLinkBox i:active {
+    transform: translateY(-10%);
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+  }
+
+  .projectSection .projectFlex .projectLinkBox i:hover {
+    transform: translateY(0%);
+    color: var(--text-color);
+    border: none;
   }
 
   .projectSection {
@@ -927,41 +934,49 @@ footer {
   /* SECTION Resume */
 
   .resumeSection h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .resumeSection .resumeFlex h2 {
-    font-size: 27px;
+    font-size: 23px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox h3 {
+    font-size: 10px;
   }
 
   .resumeSection .resumeFlex .resumeBox h4 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .resumeSection .resumeFlex .resumeBox ul li {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .resumeSection .resumeFlex p {
-    font-size: 15px;
-  }
-
-  .resumeSection .resumeFlex .skillsBox .skills h3 {
     font-size: 13px;
   }
 
+  .resumeSection .resumeBtnBox .resumeBtn {
+    font-size: 12px;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills h3 {
+    font-size: 12px;
+  }
+
   .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 60px;
+    font-size: 55px;
   }
 
   /* SECTION About */
 
   #aboutSection .aboutSection .aboutText h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   #aboutSection .aboutSection .aboutText p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   #aboutSection .statsContainer .statBox h2 {
@@ -973,15 +988,20 @@ footer {
   }
 
   #aboutSection {
-    height: auto;
+    padding: 0px 15px 0px 15px;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
+  #aboutSection .aboutSection {
+    padding-top: 80px;
+  }
+
   #aboutSection .aboutSection .aboutImg img {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 20%;
     filter: none;
     transform: scale(1);
@@ -995,24 +1015,85 @@ footer {
 
   /* SECTION Banner */
 
-  .contentSection .heroText .btnBox .seeProjectsBtn {
-    font-size: 13px;
+  .contentSection .heroText h1 {
+    font-size: 25px;
   }
 
-  .contentSection .heroText p {
-    font-size: 14px;
-  }
-
-  .contentSection .heroText .btnBox i {
+  .contentSection .heroText h2 {
     font-size: 20px;
   }
 
+  .contentSection .heroText p {
+    font-size: 12px;
+  }
+  .contentSection .heroText .socialIcons i {
+    font-size: 18px;
+  }
+
+  .contentSection .heroText .socialIcons i:hover {
+    color: var(--primary-color);
+    transform: scale(1) translateY(0);
+  }
+
+  .contentSection .heroText .btnBox i {
+    color: var(--bg-color);
+    font-size: 18px;
+  }
+
   .contentSection .heroText .btnBox .cvBtn {
-    font-size: 13px;
+    font-size: 12px;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn:active {
+    box-shadow: 0px 0px 15px var(--primary-color);
+    transform: scale(1.1);
+  }
+
+  .contentSection .heroText .btnBox .cvBtn:hover {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 12px;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active span {
+    width: 100%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active {
+    color: var(--bg-color);
+    transform: scale(1);
+    box-shadow: 0px 0px 15px var(--primary-color);
+    border: none;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover span {
+    width: 0%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover {
+    color: var(--primary-color);
+    transform: scale(1);
+    box-shadow: none;
+    border: 1px solid var(--primary-color);
+  }
+
+  .contentSection .scrollDown {
+    width: 23px;
+    height: 38px;
+  }
+  .contentSection .scrollDown::after,
+  .contentSection .scrollDown::before {
+    width: 6px;
+    height: 6px;
   }
 
   .contentSection {
-    height: 100vh;
+    height: 80vh;
     grid-template-columns: 1.2fr 1fr;
   }
 
@@ -1028,18 +1109,9 @@ footer {
     gap: 18px;
   }
 
-  .contentSection .heroText .btnBox i {
-    color: var(--bg-color);
-  }
-
-  .contentSection .heroText .btnBox .cvBtn {
-    text-align: center;
-    gap: 5px;
-  }
-
   .contentSection .heroImage img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
   .contentSection .heroImage img:hover {
@@ -1049,8 +1121,34 @@ footer {
 
   /* SECTION Navbar */
 
+  header nav .title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  header nav .links a:link,
+  header nav .links a:visited {
+    font-size: 13px;
+  }
+
+  header nav .links a:active {
+    color: var(--text-color);
+  }
+
+  header nav .links a:hover {
+    color: var(--text-color);
+  }
+
+  .links a:active::after {
+    width: 100%;
+  }
+  .links a:hover::after {
+    width: 0%;
+  }
+
   header {
-    height: auto;
+    height: 20vh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1059,17 +1157,13 @@ footer {
     flex-direction: column;
     padding: 0px;
   }
-  .title {
-    text-align: center;
-    margin-bottom: 15px;
-  }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 320px) {
   /* SECTION Navbar */
 
   header {
-    height: auto;
+    height: 23vh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1090,6 +1184,21 @@ footer {
   header nav .links a:link,
   header nav .links a:visited {
     font-size: 12px;
+  }
+
+  header nav .links a:active {
+    color: var(--text-color);
+  }
+
+  header nav .links a:hover {
+    color: var(--text-color);
+  }
+
+  .links a:active::after {
+    width: 100%;
+  }
+  .links a:hover::after {
+    width: 0%;
   }
 
   header nav .links {
@@ -1119,17 +1228,75 @@ footer {
     font-size: 16px;
   }
 
+  .contentSection .heroText .socialIcons i:hover {
+    color: var(--primary-color);
+    transform: scale(1) translateY(0);
+  }
+
   .contentSection .heroText .btnBox .cvBtn {
     font-size: 11px;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn:hover {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  .contentSection .heroText .btnBox .cvBtn:active {
+    box-shadow: 0px 0px 15px var(--primary-color);
+    transform: scale(1.1);
   }
 
   .contentSection .heroText .btnBox .seeProjectsBtn {
     font-size: 12px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active span {
+    width: 100%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active {
+    color: var(--bg-color);
+    transform: scale(1);
+    box-shadow: 0px 0px 15px var(--primary-color);
+    border: none;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover span {
+    width: 0%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover {
+    color: var(--primary-color);
+    transform: scale(1);
+    box-shadow: none;
+    border: 1px solid var(--primary-color);
+  }
+
+  .contentSection .scrollDown {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%);
+    height: 33px;
+    width: 22px;
   }
 
   .contentSection {
+    height: 77vh;
     display: flex;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 15px 10px 15px;
+    position: relative;
   }
 
   .contentSection .heroText {
@@ -1144,22 +1311,6 @@ footer {
     display: flex;
     justify-content: start;
     gap: 8px;
-  }
-
-  .contentSection .heroText .btnBox .cvBtn {
-    text-align: center;
-    display: flex;
-    gap: 5px;
-    padding: 5px 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn {
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .contentSection .heroImage img {
@@ -1189,7 +1340,11 @@ footer {
   }
 
   #aboutSection {
-    padding: 25px 15px 25px 15px;
+    height: auto;
+    padding: 0px 15px 25px 15px;
+  }
+  #aboutSection .aboutSection {
+    padding-top: 40px;
   }
 
   #aboutSection .aboutSection {
@@ -1298,6 +1453,18 @@ footer {
 
   .projectSection .projectFlex ul li {
     font-size: 12px;
+  }
+
+  .projectSection .projectFlex .projectLinkBox i:active {
+    transform: translateY(-10%);
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+  }
+
+  .projectSection .projectFlex .projectLinkBox i:hover {
+    transform: translateY(0%);
+    color: var(--text-color);
+    border: none;
   }
 
   .projectSection .projectFlex {
@@ -1358,6 +1525,18 @@ footer {
     font-size: 12px;
   }
 
+  .contactSection form .submitBtn:active {
+    box-shadow: 0px 0px 10px var(--primary-color);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .contactSection form .submitBtn:hover {
+    box-shadow: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+
   /* SECTION FOOTER  */
 
   .footerGrid .footerInfoContainer p {
@@ -1392,7 +1571,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: auto;
+    height: 23vh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1413,6 +1592,21 @@ footer {
   header nav .links a:link,
   header nav .links a:visited {
     font-size: 12px;
+  }
+
+  header nav .links a:active {
+    color: var(--text-color);
+  }
+
+  header nav .links a:hover {
+    color: var(--text-color);
+  }
+
+  .links a:active::after {
+    width: 100%;
+  }
+  .links a:hover::after {
+    width: 0%;
   }
 
   header nav .links {
@@ -1438,38 +1632,13 @@ footer {
     font-size: 12px;
   }
 
-  .contentSection .heroText .socialIcons i {
+  .contentSection .heroText .socialIcons {
+    gap: 18px;
     font-size: 16px;
   }
 
   .contentSection .heroText .btnBox .cvBtn {
     font-size: 11px;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn {
-    font-size: 12px;
-  }
-
-  .contentSection {
-    display: flex;
-    padding: 0px 15px 0px 15px;
-  }
-
-  .contentSection .heroText {
-    align-items: center;
-  }
-
-  .contentSection .heroText .socialIcons {
-    gap: 18px;
-  }
-
-  .contentSection .heroText .btnBox {
-    display: flex;
-    justify-content: start;
-    gap: 8px;
-  }
-
-  .contentSection .heroText .btnBox .cvBtn {
     text-align: center;
     display: flex;
     gap: 5px;
@@ -1478,11 +1647,77 @@ footer {
     align-items: center;
   }
 
+  .contentSection .heroText .btnBox .cvBtn:hover {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  .contentSection .heroText .btnBox .cvBtn:active {
+    box-shadow: 0px 0px 15px var(--primary-color);
+    transform: scale(1.1);
+  }
+
   .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 12px;
     padding: 5px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active span {
+    width: 100%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:active {
+    color: var(--bg-color);
+    transform: scale(1);
+    box-shadow: 0px 0px 15px var(--primary-color);
+    border: none;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover span {
+    width: 0%;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn:hover {
+    color: var(--primary-color);
+    transform: scale(1);
+    box-shadow: none;
+    border: 1px solid var(--primary-color);
+  }
+
+  .contentSection .heroText .socialIcons i:hover {
+    color: var(--primary-color);
+    transform: scale(1) translateY(0);
+  }
+
+  .contentSection .scrollDown {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%);
+    height: 33px;
+    width: 22px;
+  }
+
+  .contentSection {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 15px 10px 15px;
+    position: relative;
+  }
+
+  .contentSection .heroText {
+    align-items: center;
+  }
+
+  .contentSection .heroText .btnBox {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
   }
 
   .contentSection .heroImage img {
@@ -1512,7 +1747,11 @@ footer {
   }
 
   #aboutSection {
-    padding: 25px 15px 25px 15px;
+    height: auto;
+    padding: 0px 15px 25px 15px;
+  }
+  #aboutSection .aboutSection {
+    padding-top: 40px;
   }
 
   #aboutSection .aboutSection {
@@ -1538,14 +1777,14 @@ footer {
   }
 
   .resumeSection .resumeFlex h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .resumeSection .resumeFlex .resumeBox h3 {
     font-size: 10px;
   }
   .resumeSection .resumeFlex .resumeBox h4 {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .resumeSection .resumeFlex .resumeBox ul li {
@@ -1623,6 +1862,18 @@ footer {
     font-size: 12px;
   }
 
+  .projectSection .projectFlex .projectLinkBox i:active {
+    transform: translateY(-10%);
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+  }
+
+  .projectSection .projectFlex .projectLinkBox i:hover {
+    transform: translateY(0%);
+    color: var(--text-color);
+    border: none;
+  }
+
   .projectSection .projectFlex {
     justify-content: center;
     align-items: center;
@@ -1679,6 +1930,18 @@ footer {
 
   .contactSection form .submitBtn {
     font-size: 12px;
+  }
+
+  .contactSection form .submitBtn:active {
+    box-shadow: 0px 0px 10px var(--primary-color);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .contactSection form .submitBtn:hover {
+    box-shadow: none;
+    opacity: 1;
+    transform: scale(1);
   }
 
   /* SECTION FOOTER  */

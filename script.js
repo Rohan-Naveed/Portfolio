@@ -6,6 +6,8 @@ const senderPhone = document.getElementById("phone");
 const senderEmail = document.getElementById("email");
 const senderMessage = document.getElementById("message");
 const allSections = document.querySelectorAll(".section");
+const aboutSection = document.querySelector(".aboutSection");
+const scrollBtn = document.querySelector(".scrollDown");
 
 // Auto Typing
 var typed = new Typed(".typing", {
@@ -43,11 +45,8 @@ form.addEventListener("submit", (e) => {
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
-
-  console.log(entry.target);
 
   entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target);
@@ -59,3 +58,9 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 });
 
 allSections.forEach((sec) => sectionObserver.observe(sec));
+
+// Scroll Down Btn
+
+scrollBtn.addEventListener("click", function () {
+  aboutSection.scrollIntoView({ behavior: "smooth" });
+});
