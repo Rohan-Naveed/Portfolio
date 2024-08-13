@@ -268,8 +268,8 @@ header nav .title:hover .customText {
 
 .contentSection .heroImage img {
   border-radius: 50%;
-  width: 375px;
-  height: 375px;
+  width: 300px;
+  height: 300px;
   transition: 0.25s;
   box-shadow: 0px 0px 15px var(--primary-color);
 }
@@ -277,6 +277,58 @@ header nav .title:hover .customText {
 .contentSection .heroImage img:hover {
   box-shadow: 0px 0px 50px var(--primary-color);
   border: none;
+}
+
+.scrollDown {
+  grid-column: 1/-1;
+  height: 50px;
+  width: 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  transition: 0.5s;
+}
+
+.scrollDown:hover {
+  transform: translateY(-15%);
+}
+
+.scrollDown::after,
+.scrollDown::before {
+  content: " ";
+  border-bottom: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(45deg);
+  animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+.scrollDown::after {
+  top: 25%;
+  animation-delay: 0.3s;
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
 }
 
 /* SECTION ABOUT ME */
@@ -321,8 +373,8 @@ header nav .title:hover .customText {
 
 .aboutSection .aboutImg img {
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   filter: grayscale();
   transition: 0.5s;
 }
