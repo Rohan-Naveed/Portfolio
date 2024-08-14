@@ -1149,7 +1149,7 @@ footer {
 
   header {
     height: 20dvh;
-    padding: 18px 0px 15px 0px;
+    padding: 0px 0px 10px 0px;
   }
 
   nav {
@@ -1164,7 +1164,7 @@ footer {
 
   header {
     height: 23dvh;
-    padding: 18px 0px 15px 0px;
+    padding: 0px 0px 10px 0px;
   }
 
   nav {
@@ -1572,7 +1572,7 @@ footer {
 
   header {
     height: 23dvh;
-    padding: 18px 0px 15px 0px;
+    padding: 0px 0px 10px 0px;
   }
 
   nav {
@@ -1695,7 +1695,7 @@ footer {
   .contentSection .scrollDown {
     position: absolute;
     left: 50%;
-    bottom: 3%;
+    bottom: 7%;
     transform: translate(-50%);
     height: 33px;
     width: 22px;
@@ -1777,7 +1777,7 @@ footer {
   }
 
   .resumeSection .resumeFlex h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .resumeSection .resumeFlex .resumeBox h3 {
