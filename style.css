@@ -1163,7 +1163,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 20dvh;
+    height: 15dvh;
     padding: 0px 0px 10px 0px;
   }
 
@@ -1293,7 +1293,7 @@ footer {
   }
 
   .contentSection {
-    height: 77dvh;
+    height: 85dvh;
     display: flex;
     padding: 0px 15px 10px 15px;
     position: relative;
@@ -1571,7 +1571,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 23dvh;
+    height: 15dvh;
     padding: 0px 0px 10px 0px;
   }
 
@@ -1702,7 +1702,7 @@ footer {
   }
 
   .contentSection {
-    height: 77dvh;
+    height: 85dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
