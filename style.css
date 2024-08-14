@@ -335,14 +335,16 @@ header nav .title:hover .customText {
 
 #aboutSection {
   box-shadow: 0px 0px 10px -2px var(--primary-color);
-  padding: 50px 30px 30px 30px;
+  padding: 0px 30px 30px 30px;
   height: 100vh;
 }
 
 .aboutSection {
+  height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  align-items: center;
 }
 
 .aboutSection .aboutText h1 {
@@ -361,12 +363,7 @@ header nav .title:hover .customText {
   font-size: 35px;
 }
 
-.aboutSection .aboutText {
-  grid-column: 1/3;
-}
-
 .aboutSection .aboutImg {
-  grid-column: 3 / -1;
   align-self: center;
   justify-self: center;
 }
@@ -387,17 +384,15 @@ header nav .title:hover .customText {
 }
 
 .statsContainer {
-  width: 100%;
+  grid-column: 1/-1;
+  align-self: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 90px;
 }
 
 .statsContainer .statBox {
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-self: end;
 }
 
 .statsContainer .statBox h2 {
@@ -988,15 +983,8 @@ footer {
   }
 
   #aboutSection {
-    padding: 0px 15px 0px 15px;
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #aboutSection .aboutSection {
-    padding-top: 80px;
+    padding: 0px 15px 30px 15px;
+    height: 100vh;
   }
 
   #aboutSection .aboutSection .aboutImg img {
@@ -1163,8 +1151,8 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 15dvh;
-    padding: 0px 0px 10px 0px;
+    height: 17dvh;
+    padding: 20px 0px 0px 0px;
   }
 
   nav {
@@ -1178,12 +1166,12 @@ footer {
   }
 
   header nav .title a {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   header nav .links a:link,
   header nav .links a:visited {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   header nav .links a:active {
@@ -1212,20 +1200,20 @@ footer {
   /* SECTION Banner */
 
   .contentSection .heroText h1 {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .contentSection .heroText h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .contentSection .heroText p {
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .contentSection .heroText .socialIcons i {
-    font-size: 16px;
+    font-size: 21px;
   }
 
   .contentSection .heroText .socialIcons i:hover {
@@ -1234,11 +1222,11 @@ footer {
   }
 
   .contentSection .heroText .btnBox .cvBtn {
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
     display: flex;
     gap: 5px;
-    padding: 5px 10px;
+    padding: 13px 15px;
     justify-content: center;
     align-items: center;
   }
@@ -1254,8 +1242,8 @@ footer {
   }
 
   .contentSection .heroText .btnBox .seeProjectsBtn {
-    font-size: 12px;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 13px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1286,14 +1274,20 @@ footer {
   .contentSection .scrollDown {
     position: absolute;
     left: 50%;
-    bottom: 3%;
+    bottom: 6%;
     transform: translate(-50%);
-    height: 33px;
-    width: 22px;
+    height: 47px;
+    width: 27px;
+  }
+
+  .contentSection .scrollDown::after,
+  .contentSection .scrollDown::before {
+    width: 9px;
+    height: 9px;
   }
 
   .contentSection {
-    height: 85dvh;
+    height: 83dvh;
     display: flex;
     padding: 0px 15px 10px 15px;
     position: relative;
@@ -1320,11 +1314,11 @@ footer {
   /* SECTION About */
 
   #aboutSection .aboutSection .aboutText h1 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   #aboutSection .aboutSection .aboutText p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #aboutSection .statsContainer .statBox h2 {
@@ -1336,20 +1330,18 @@ footer {
   }
 
   #aboutSection .aboutSection .aboutText h1 i {
-    font-size: 23px;
+    font-size: 28px;
   }
 
   #aboutSection {
-    height: auto;
+    height: 100vh;
     padding: 0px 15px 25px 15px;
   }
   #aboutSection .aboutSection {
-    padding-top: 40px;
-  }
-
-  #aboutSection .aboutSection {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   #aboutSection .aboutSection .aboutImg img {
@@ -1358,6 +1350,7 @@ footer {
   }
 
   #aboutSection .statsContainer {
+    padding-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 12px;
@@ -1366,26 +1359,26 @@ footer {
   /* SECTION Resume */
 
   .resumeSection h1 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .resumeSection .resumeFlex h2 {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .resumeSection .resumeFlex .resumeBox h3 {
-    font-size: 10px;
+    font-size: 12px;
   }
   .resumeSection .resumeFlex .resumeBox h4 {
-    font-size: 13px;
+    font-size: 17px;
   }
 
   .resumeSection .resumeFlex .resumeBox ul li {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .resumeSection .resumeFlex p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills h3 {
@@ -1571,8 +1564,8 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 15dvh;
-    padding: 0px 0px 10px 0px;
+    height: 17dvh;
+    padding: 20px 0px 0px 0px;
   }
 
   nav {
@@ -1620,11 +1613,11 @@ footer {
   /* SECTION Banner */
 
   .contentSection .heroText h1 {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .contentSection .heroText h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .contentSection .heroText p {
@@ -1634,7 +1627,7 @@ footer {
 
   .contentSection .heroText .socialIcons {
     gap: 18px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .contentSection .heroText .btnBox .cvBtn {
@@ -1659,7 +1652,7 @@ footer {
 
   .contentSection .heroText .btnBox .seeProjectsBtn {
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 12px 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1697,8 +1690,8 @@ footer {
     left: 50%;
     bottom: 7%;
     transform: translate(-50%);
-    height: 33px;
-    width: 22px;
+    height: 37px;
+    width: 25px;
   }
 
   .contentSection {
@@ -1747,11 +1740,8 @@ footer {
   }
 
   #aboutSection {
-    height: auto;
+    height: 100vh;
     padding: 0px 15px 25px 15px;
-  }
-  #aboutSection .aboutSection {
-    padding-top: 40px;
   }
 
   #aboutSection .aboutSection {
