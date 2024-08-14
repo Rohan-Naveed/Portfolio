@@ -1093,7 +1093,7 @@ footer {
   }
 
   .contentSection {
-    height: 80vh;
+    height: 80dvh;
     grid-template-columns: 1.2fr 1fr;
   }
 
@@ -1148,7 +1148,7 @@ footer {
   }
 
   header {
-    height: 20vh;
+    height: 20dvh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1163,7 +1163,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 23vh;
+    height: 23dvh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1293,7 +1293,7 @@ footer {
   }
 
   .contentSection {
-    height: 77vh;
+    height: 77dvh;
     display: flex;
     padding: 0px 15px 10px 15px;
     position: relative;
@@ -1571,7 +1571,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 23vh;
+    height: 23dvh;
     padding: 12px 0px 15px 0px;
   }
 
@@ -1702,7 +1702,7 @@ footer {
   }
 
   .contentSection {
-    height: 77vh;
+    height: 77dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
