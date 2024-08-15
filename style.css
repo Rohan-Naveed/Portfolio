@@ -7,6 +7,42 @@
   scroll-behavior: smooth;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes scrollDownArr {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+@keyframes movingBorder {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 body::-webkit-scrollbar {
   width: 7px;
 }
@@ -45,6 +81,45 @@ body {
   background-color: var(--second-bg-color);
   margin: auto;
   overflow-x: hidden;
+  overflow-y: hidden;
+  transition: all 2s;
+  opacity: 0;
+}
+
+/* SECTION Preeloader */
+
+.preLoader {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--second-bg-color);
+  position: fixed;
+  z-index: 1000;
+}
+
+.loader {
+  align-self: center;
+  justify-self: center;
+  width: 85px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: var(--primary-color);
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
 }
 
 /* SECTION Navbar */
@@ -289,11 +364,13 @@ header nav .title:hover .customText {
   align-self: center;
   justify-self: center;
   position: relative;
-  transition: 0.5s;
+  transition: all 0.5s;
+  animation: movingBorder 3s ease-in-out infinite;
 }
 
 .scrollDown:hover {
   transform: translateY(-15%);
+  box-shadow: 4px 10px 20px -4px var(--primary-color);
 }
 
 .scrollDown::after,
@@ -307,28 +384,12 @@ header nav .title:hover .customText {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -100%) rotate(45deg);
-  animation: scrollDown 1.5s ease-in-out infinite;
+  animation: scrollDownArr 1.5s ease-in-out infinite;
 }
 
 .scrollDown::after {
   top: 25%;
   animation-delay: 0.3s;
-}
-
-@keyframes scrollDown {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    top: 90%;
-  }
 }
 
 /* SECTION ABOUT ME */
@@ -364,16 +425,41 @@ header nav .title:hover .customText {
 }
 
 .aboutSection .aboutImg {
-  height: 300px;
   width: 300px;
-  /* border-radius: 50% 10% 10% 50%; */
-  border-radius: 20%;
-  border: 2px solid var(--primary-color);
+  height: 300px;
   align-self: center;
   justify-self: center;
   transform: translate(5%, 20%);
+  border: 2px solid var(--primary-color);
+  border-radius: 20%;
   transition: 0.5s;
 }
+
+/* .aboutSection .aboutImg::after {
+  content: " ";
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--second-bg-color),
+    var(--primary-color),
+    var(--second-bg-color),
+    var(--second-bg-color),
+    var(--second-bg-color),
+    var(--primary-color),
+    var(--second-bg-color),
+    var(--second-bg-color),
+    var(--second-bg-color)
+  );
+  position: absolute;
+  padding: 2px;
+  z-index: -1;
+  animation: movingBorder 2s linear infinite;
+} */
 
 .aboutSection .aboutImg img {
   /* border-radius: 50% 10% 10% 50%; */
@@ -499,18 +585,45 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex .resumeBox .infoBox {
+  background-color: var(--second-bg-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0px 0px 10px -2px var(--text-color);
+  box-shadow: 0px 0px 10px -5px var(--text-color);
   padding: 30px 20px 30px 30px;
   transition: 0.25s;
   border-radius: 20px;
+  position: relative;
 }
 
-.resumeSection .resumeBox .infoBox:hover {
-  box-shadow: 0px 0px 10px 0px var(--primary-color);
-  transform: scale(1.02) translateY(-10%);
+.resumeSection .resumeFlex .resumeBox .infoBox::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 40%,
+    var(--primary-color)
+  );
+  border-radius: 20px;
+  padding: 2px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  animation: movingBorder 2s linear infinite;
+  transition: 0.5s;
+}
+
+.resumeSection .resumeFlex .resumeBox .infoBox::after {
+  filter: blur(1rem);
+  opacity: 0.4;
+}
+
+.resumeSection .resumeBox .infoBox:hover::after {
+  filter: blur(2rem);
+  opacity: 1;
 }
 
 .resumeSection .resumeFlex .skillsBox {
@@ -520,19 +633,46 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex .skillsBox .skills {
+  background-color: var(--second-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px 5px 10px 5px;
-  box-shadow: 0px 0px 10px -2px var(--text-color);
+  box-shadow: 0px 0px 10px -5px var(--text-color);
   transition: 0.25s;
   border-radius: 20px;
+  position: relative;
 }
 
-.resumeSection .resumeFlex .skillsBox .skills:hover {
-  box-shadow: 0px 0px 10px 0px var(--primary-color);
-  transform: scale(1.02) translateY(-10%);
+.resumeSection .resumeFlex .skillsBox .skills::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--primary-color)
+  );
+  border-radius: 20px;
+  padding: 2px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  animation: movingBorder 2s linear infinite;
+  transition: 0.5s;
+}
+
+.resumeSection .resumeFlex .skillsBox .skills::after {
+  filter: blur(1rem);
+  opacity: 0.4;
+}
+
+.resumeSection .resumeFlex .skillsBox .skills:hover::after {
+  filter: blur(2rem);
+  opacity: 1;
 }
 
 .resumeSection .resumeBtnBox {
@@ -1009,6 +1149,7 @@ footer {
   }
 
   #aboutSection .aboutSection .aboutImg img {
+    filter: none;
     width: 100%;
     height: 100%;
     transform: translate(-8%, -9%);

@@ -5,9 +5,11 @@ const senderFullName = document.getElementById("name");
 const senderPhone = document.getElementById("phone");
 const senderEmail = document.getElementById("email");
 const senderMessage = document.getElementById("message");
+const body = document.querySelector("body");
 const allSections = document.querySelectorAll(".section");
 const aboutSection = document.querySelector(".aboutSection");
 const scrollBtn = document.querySelector(".scrollDown");
+const preLoader = document.querySelector(".preLoader");
 
 // Auto Typing
 var typed = new Typed(".typing", {
@@ -63,4 +65,15 @@ allSections.forEach((sec) => sectionObserver.observe(sec));
 
 scrollBtn.addEventListener("click", function () {
   aboutSection.scrollIntoView({ behavior: "smooth" });
+});
+
+// PreLoader
+
+console.log(body);
+console.log(preLoader);
+
+window.addEventListener("load", function () {
+  body.style.overflowY = "scroll";
+  body.style.opacity = 1;
+  preLoader.style.display = "none";
 });
