@@ -395,7 +395,7 @@ header nav .title:hover .customText {
   border-radius: 20%;
   filter: none;
   transform: translate(-15%, -13%);
-  box-shadow: 0px 5px 10px var(--primary-color);
+  box-shadow: 5px 5px 10px -2px var(--primary-color);
 }
 
 .statsContainer {
