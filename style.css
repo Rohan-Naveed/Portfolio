@@ -1550,11 +1550,11 @@ footer {
   }
 
   .resumeSection .resumeFlex .skillsBox .skills h3 {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 33px;
+    font-size: 37px;
   }
 
   .resumeSection {
@@ -1578,8 +1578,8 @@ footer {
 
   .resumeSection .resumeFlex .skillsBox .skills {
     border-radius: 10px;
-    width: 65px;
-    height: 65px;
+    width: 79px;
+    height: 79px;
   }
 
   .resumeBtnBox {
@@ -1962,11 +1962,11 @@ footer {
   }
 
   .resumeSection .resumeFlex .skillsBox .skills h3 {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 33px;
+    font-size: 35px;
   }
 
   .resumeSection {
@@ -1983,15 +1983,15 @@ footer {
 
   .resumeSection .resumeFlex .skillsBox {
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 30px;
+    row-gap: 25px;
     justify-items: center;
     align-items: center;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills {
     border-radius: 10px;
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
   }
 
   .resumeBtnBox {
