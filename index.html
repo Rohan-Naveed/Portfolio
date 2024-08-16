@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Potfolio</title>
+
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" /> -->
     <link
@@ -13,13 +14,13 @@
   </head>
 
   <body>
-    <!-- SECTION Navbar -->
-
     <div class="preLoader">
-      <div class="loader"></div>
+      <span class="loader"></span>
     </div>
 
-    <header id="homeSection">
+    <!-- SECTION Navbar -->
+
+    <header class="preLoadingSec" id="homeSection">
       <nav>
         <div class="title">
           <a
@@ -40,7 +41,10 @@
 
     <!-- SECTION Banner -->
 
-    <div class="section section--hidden contentSection" id="contentSection">
+    <div
+      class="section section--hidden preLoadingSec contentSection"
+      id="contentSection"
+    >
       <div class="heroText">
         <h1>Hi, It's <span>Rohan.</span></h1>
         <h2>I'm a <span class="typing"></span></h2>
@@ -81,7 +85,7 @@
 
     <!-- SECTION About -->
 
-    <section id="aboutSection">
+    <section class="preLoadingSec" id="aboutSection">
       <div class="section section--hidden aboutSection">
         <div class="aboutText">
           <h1><i class="bx bx-info-circle"></i>About Me</h1>
@@ -123,7 +127,10 @@
 
     <!-- SECTION Resume -->
 
-    <section class="section section--hidden resumeSection" id="resumeSection">
+    <section
+      class="section section--hidden preLoadingSec resumeSection"
+      id="resumeSection"
+    >
       <h1>My Resume</h1>
 
       <div class="resumeBtnBox">
@@ -236,7 +243,10 @@
 
     <!-- SECTION Projects -->
 
-    <section class="section section--hidden projectSection" id="projectSection">
+    <section
+      class="section section--hidden preLoadingSec projectSection"
+      id="projectSection"
+    >
       <h1>My Projects</h1>
 
       <div class="projectFlex">
@@ -335,7 +345,10 @@
 
     <!-- SECTION Contact -->
 
-    <section class="section section--hidden contactSection" id="contactSection">
+    <section
+      class="section section--hidden preLoadingSec contactSection"
+      id="contactSection"
+    >
       <h1>Feel Free To Get In Touch</h1>
 
       <form>
@@ -396,7 +409,7 @@
 
     <!-- SECTION Footer -->
 
-    <footer>
+    <footer class="preLoadingSec">
       <div class="footerGrid">
         <div class="footerInfoContainer">
           <i class="bx bxs-user bx-border-circle"></i>

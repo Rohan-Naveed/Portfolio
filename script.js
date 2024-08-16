@@ -8,6 +8,7 @@ const senderMessage = document.getElementById("message");
 const body = document.querySelector("body");
 const allSections = document.querySelectorAll(".section");
 const aboutSection = document.querySelector(".aboutSection");
+const preLoadingSec = document.querySelectorAll(".preLoadingSec");
 const scrollBtn = document.querySelector(".scrollDown");
 const preLoader = document.querySelector(".preLoader");
 
@@ -69,11 +70,10 @@ scrollBtn.addEventListener("click", function () {
 
 // PreLoader
 
-console.log(body);
-console.log(preLoader);
-
-window.addEventListener("load", function () {
-  body.style.overflowY = "scroll";
-  body.style.opacity = 1;
-  preLoader.style.display = "none";
+const PreLoaderTimer = window.addEventListener("load", function () {
+  setTimeout(function () {
+    preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
+    body.style.overflowY = "visible";
+    preLoader.style.display = "none";
+  }, 3000);
 });

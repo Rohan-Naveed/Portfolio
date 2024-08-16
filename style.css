@@ -82,7 +82,10 @@ body {
   margin: auto;
   overflow-x: hidden;
   overflow-y: hidden;
-  transition: all 2s;
+  transition: 2s;
+}
+
+.preLoadingSec {
   opacity: 0;
 }
 
@@ -92,7 +95,7 @@ body {
   display: grid;
   height: 100vh;
   width: 100%;
-  background-color: var(--second-bg-color);
+  background-color: var(--bg-color);
   position: fixed;
   z-index: 1000;
 }
@@ -100,26 +103,28 @@ body {
 .loader {
   align-self: center;
   justify-self: center;
-  width: 85px;
-  aspect-ratio: 1;
-  display: grid;
-  border: 4px solid #0000;
-  border-radius: 50%;
-  border-right-color: var(--primary-color);
-  animation: l15 1s infinite linear;
+  color: var(--primary-color);
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 78px;
+  opacity: 0.8;
 }
-.loader::before,
-.loader::after {
-  content: "";
-  grid-area: 1/1;
-  margin: 2px;
-  border: inherit;
-  border-radius: 50%;
-  animation: l15 2s infinite;
+.loader:before {
+  content: "{";
+  display: inline-block;
+  animation: pulse 0.4s alternate infinite ease-in-out;
 }
-.loader::after {
-  margin: 8px;
-  animation-duration: 3s;
+.loader:after {
+  content: "}";
+  display: inline-block;
+  animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
 }
 
 /* SECTION Navbar */
@@ -604,7 +609,7 @@ header nav .title:hover .customText {
   background-image: conic-gradient(
     from var(--angle),
     transparent 40%,
-    var(--primary-color)
+    var(--text-color)
   );
   border-radius: 20px;
   padding: 2px;
@@ -622,6 +627,11 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeBox .infoBox:hover::after {
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 40%,
+    var(--primary-color)
+  );
   filter: blur(2rem);
   opacity: 1;
 }
@@ -653,7 +663,7 @@ header nav .title:hover .customText {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
-    var(--primary-color)
+    var(--text-color)
   );
   border-radius: 20px;
   padding: 2px;
@@ -671,6 +681,11 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex .skillsBox .skills:hover::after {
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--primary-color)
+  );
   filter: blur(2rem);
   opacity: 1;
 }
@@ -1119,6 +1134,22 @@ footer {
     font-size: 55px;
   }
 
+  .resumeSection .resumeBox .infoBox::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 40%,
+      var(--primary-color)
+    );
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 50%,
+      var(--primary-color)
+    );
+  }
+
   /* SECTION About */
 
   #aboutSection .aboutSection .aboutText h1 {
@@ -1447,7 +1478,7 @@ footer {
   }
 
   .contentSection {
-    height: 83vh;
+    height: 77vh;
     display: flex;
     padding: 0px 15px 10px 15px;
     position: relative;
@@ -1505,15 +1536,15 @@ footer {
   }
 
   #aboutSection .aboutSection .aboutImg {
-    width: 125px;
-    height: 125px;
-    transform: translate(5%, 5%);
+    width: 200px;
+    height: 200px;
+    transform: translate(7%, 7%);
   }
 
   #aboutSection .aboutSection .aboutImg img {
     width: 100%;
     height: 100%;
-    transform: translate(-8%, -9%);
+    transform: translate(-12%, -13%);
     box-shadow: 2px 2px 5px -2px var(--primary-color);
   }
 
@@ -1580,6 +1611,22 @@ footer {
     border-radius: 10px;
     width: 79px;
     height: 79px;
+  }
+
+  .resumeSection .resumeBox .infoBox::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 40%,
+      var(--primary-color)
+    );
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 50%,
+      var(--primary-color)
+    );
   }
 
   .resumeBtnBox {
@@ -1863,7 +1910,7 @@ footer {
   }
 
   .contentSection {
-    height: 85vh;
+    height: 77vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1918,15 +1965,15 @@ footer {
   }
 
   #aboutSection .aboutSection .aboutImg {
-    width: 125px;
-    height: 125px;
-    transform: translate(5%, 5%);
+    width: 200px;
+    height: 200px;
+    transform: translate(7%, 7%);
   }
 
   #aboutSection .aboutSection .aboutImg img {
     width: 100%;
     height: 100%;
-    transform: translate(-8%, -9%);
+    transform: translate(-12%, -13%);
     box-shadow: 2px 2px 5px -2px var(--primary-color);
   }
 
@@ -1992,6 +2039,22 @@ footer {
     border-radius: 10px;
     width: 75px;
     height: 75px;
+  }
+
+  .resumeSection .resumeBox .infoBox::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 40%,
+      var(--primary-color)
+    );
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 50%,
+      var(--primary-color)
+    );
   }
 
   .resumeBtnBox {
