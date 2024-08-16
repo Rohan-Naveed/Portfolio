@@ -502,6 +502,8 @@ header nav .title:hover .customText {
 }
 
 .statsContainer .statBox {
+  justify-content: center;
+
   display: flex;
   align-items: center;
 }
@@ -768,6 +770,11 @@ header nav .title:hover .customText {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+.projectSection .projectFlex video {
+  max-width: 100%;
+  height: auto;
 }
 
 .projectSection .projectFlex .projectLinkBox {
