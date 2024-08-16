@@ -1139,7 +1139,7 @@ footer {
 
   #aboutSection {
     padding: 0px 15px 30px 15px;
-    height: 100dvh;
+    height: 95vh;
   }
 
   #aboutSection .aboutSection .aboutImg {
@@ -1241,7 +1241,7 @@ footer {
   }
 
   .contentSection {
-    height: 80dvh;
+    height: 80vh;
     grid-template-columns: 1.2fr 1fr;
   }
 
@@ -1296,7 +1296,7 @@ footer {
   }
 
   header {
-    height: 20dvh;
+    height: 20vh;
     padding: 0px 0px 10px 0px;
   }
 
@@ -1311,7 +1311,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 17dvh;
+    height: 17vh;
     padding: 20px 0px 0px 0px;
   }
 
@@ -1447,7 +1447,7 @@ footer {
   }
 
   .contentSection {
-    height: 83dvh;
+    height: 83vh;
     display: flex;
     padding: 0px 15px 10px 15px;
     position: relative;
@@ -1494,7 +1494,7 @@ footer {
   }
 
   #aboutSection {
-    height: 100dvh;
+    height: 95vh;
     padding: 0px 15px 25px 15px;
   }
   #aboutSection .aboutSection {
@@ -1732,7 +1732,7 @@ footer {
   /* SECTION Navbar */
 
   header {
-    height: 17dvh;
+    height: 17vh;
     padding: 20px 0px 0px 0px;
   }
 
@@ -1863,7 +1863,7 @@ footer {
   }
 
   .contentSection {
-    height: 85dvh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1908,7 +1908,7 @@ footer {
   }
 
   #aboutSection {
-    height: 100dvh;
+    height: 95vh;
     padding: 0px 15px 25px 15px;
   }
 
