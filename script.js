@@ -75,5 +75,5 @@ const PreLoaderTimer = window.addEventListener("load", function () {
     preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
     body.style.overflowY = "visible";
     preLoader.style.display = "none";
-  }, 3000);
+  }, 2000);
 });
