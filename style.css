@@ -5,6 +5,7 @@
   border: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @property --angle {
@@ -1410,11 +1411,15 @@ footer {
   }
 
   .contentSection .heroText .socialIcons i {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-color);
     font-size: 21px;
   }
 
   .contentSection .heroText .socialIcons i:hover {
     color: var(--primary-color);
+    background-color: var(--bg-color);
     transform: scale(1) translateY(0);
   }
 
@@ -1433,11 +1438,6 @@ footer {
     transform: scale(1);
   }
 
-  .contentSection .heroText .btnBox .cvBtn:active {
-    box-shadow: 0px 0px 15px var(--primary-color);
-    transform: scale(1.1);
-  }
-
   .contentSection .heroText .btnBox .seeProjectsBtn {
     font-size: 14px;
     padding: 13px 15px;
@@ -1446,23 +1446,13 @@ footer {
     align-items: center;
   }
 
-  .contentSection .heroText .btnBox .seeProjectsBtn:active span {
-    width: 100%;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn:active {
-    color: var(--bg-color);
-    transform: scale(1);
-    box-shadow: 0px 0px 15px var(--primary-color);
-    border: none;
-  }
-
   .contentSection .heroText .btnBox .seeProjectsBtn:hover span {
     width: 0%;
   }
 
   .contentSection .heroText .btnBox .seeProjectsBtn:hover {
     color: var(--primary-color);
+
     transform: scale(1);
     box-shadow: none;
     border: 1px solid var(--primary-color);
@@ -1881,17 +1871,6 @@ footer {
     align-items: center;
   }
 
-  .contentSection .heroText .btnBox .seeProjectsBtn:active span {
-    width: 100%;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn:active {
-    color: var(--bg-color);
-    transform: scale(1);
-    box-shadow: 0px 0px 15px var(--primary-color);
-    border: none;
-  }
-
   .contentSection .heroText .btnBox .seeProjectsBtn:hover span {
     width: 0%;
   }
@@ -1901,6 +1880,12 @@ footer {
     transform: scale(1);
     box-shadow: none;
     border: 1px solid var(--primary-color);
+  }
+
+  .contentSection .heroText .socialIcons i {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-color);
   }
 
   .contentSection .heroText .socialIcons i:hover {
@@ -2099,12 +2084,6 @@ footer {
 
   .projectSection .projectFlex ul li {
     font-size: 12px;
-  }
-
-  .projectSection .projectFlex .projectLinkBox i:active {
-    transform: translateY(-10%);
-    color: var(--primary-color);
-    border: 1.5px solid var(--primary-color);
   }
 
   .projectSection .projectFlex .projectLinkBox i:hover {

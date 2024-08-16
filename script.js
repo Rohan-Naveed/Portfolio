@@ -1,16 +1,44 @@
 "use strict";
 
+const preLoader = document.querySelector(".preLoader");
+const preLoadingSec = document.querySelectorAll(".preLoadingSec");
+const allSections = document.querySelectorAll(".section");
+const aboutSection = document.querySelector(".aboutSection");
+const projectSection = document.querySelector(".projectSection");
 const form = document.querySelector("form");
 const senderFullName = document.getElementById("name");
 const senderPhone = document.getElementById("phone");
 const senderEmail = document.getElementById("email");
 const senderMessage = document.getElementById("message");
 const body = document.querySelector("body");
-const allSections = document.querySelectorAll(".section");
-const aboutSection = document.querySelector(".aboutSection");
-const preLoadingSec = document.querySelectorAll(".preLoadingSec");
 const scrollBtn = document.querySelector(".scrollDown");
-const preLoader = document.querySelector(".preLoader");
+const seeProjectsbtn = document.querySelector(".seeProjectsBtn");
+
+// PreLoader
+const PreLoaderTimer = window.addEventListener("load", function () {
+  setTimeout(function () {
+    preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
+    body.style.overflowY = "visible";
+    preLoader.style.display = "none";
+  }, 2000);
+});
+
+// Reveal section on scroll
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.1,
+});
+
+allSections.forEach((sec) => sectionObserver.observe(sec));
 
 // Auto Typing
 var typed = new Typed(".typing", {
@@ -18,6 +46,16 @@ var typed = new Typed(".typing", {
   typeSpeed: 175,
   backSpeed: 175,
   loop: true,
+});
+
+// Scroll Down Btn
+scrollBtn.addEventListener("click", function () {
+  aboutSection.scrollIntoView({ behavior: "smooth" });
+});
+
+// See Projects Btn
+seeProjectsbtn.addEventListener("click", function () {
+  projectSection.scrollIntoView({ behavior: "smooth" });
 });
 
 // Email Send Functionality
@@ -42,38 +80,4 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   sendEmail();
-});
-
-// Reveal section on scroll
-
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
-};
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.01,
-});
-
-allSections.forEach((sec) => sectionObserver.observe(sec));
-
-// Scroll Down Btn
-
-scrollBtn.addEventListener("click", function () {
-  aboutSection.scrollIntoView({ behavior: "smooth" });
-});
-
-// PreLoader
-
-const PreLoaderTimer = window.addEventListener("load", function () {
-  setTimeout(function () {
-    preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
-    body.style.overflowY = "visible";
-    preLoader.style.display = "none";
-  }, 2000);
 });
