@@ -352,60 +352,75 @@
     >
       <h1>Feel Free To Get In Touch</h1>
 
-      <form>
-        <div class="inputContainer">
-          <label for="name">
-            <i class="bx bxs-user"></i>
-          </label>
-          <input
-            class="inputField inputFieldName"
-            type="text"
-            id="name"
-            placeholder="Full Name"
-            autocomplete="off"
-          />
-        </div>
+      <div class="formContainer">
+        <form>
+          <div class="formGroup">
+            <label for="name">
+              <i class="bx bxs-user inputAreaIcon"></i>
+            </label>
+            <div class="inputContainer">
+              <input
+                required="required"
+                type="text"
+                id="name"
+                autocomplete="off"
+              />
+              <span>Username</span>
+              <i class="bottomLine"></i>
+            </div>
+          </div>
 
-        <div class="inputContainer">
-          <label for="phone">
-            <i class="bx bx-phone"></i>
-          </label>
-          <input
-            class="inputField inputFieldPhone"
-            type="tel"
-            id="phone"
-            placeholder="Phone Number"
-            autocomplete="off"
-          />
-        </div>
+          <div class="formGroup">
+            <label for="phone">
+              <i class="bx bx-phone inputAreaIcon"></i>
+            </label>
+            <div class="inputContainer">
+              <input
+                required="required"
+                type="tel"
+                id="phone"
+                autocomplete="off"
+              />
+              <span>Phone Number</span>
+              <i class="bottomLine"></i>
+            </div>
+          </div>
 
-        <div class="inputContainer">
-          <label for="email">
-            <i class="bx bx-envelope"></i>
-          </label>
-          <input
-            class="inputField inputFieldEmail"
-            type="email"
-            id="email"
-            placeholder="Email"
-            autocomplete="off"
-          />
-        </div>
+          <div class="formGroup">
+            <label for="email">
+              <i class="bx bx-envelope inputAreaIcon"></i>
+            </label>
 
-        <div class="inputContainer">
-          <label for="message">
-            <i class="bx bxs-chat textAreaIcon"></i>
-          </label>
-          <textarea
-            class="textArea"
-            id="message"
-            placeholder="Message Me"
-            autocomplete="off"
-          ></textarea>
-        </div>
+            <div class="inputContainer">
+              <input
+                required="required"
+                type="email"
+                id="email"
+                autocomplete="off"
+              />
+              <span>Email</span>
+              <i class="bottomLine"></i>
+            </div>
+          </div>
 
-        <button type="submit" class="submitBtn">Submit</button>
-      </form>
+          <div class="formGroup">
+            <label for="message">
+              <i class="bx bxs-chat textAreaIcon"></i>
+            </label>
+            <div class="inputContainer">
+              <textarea
+                required="required"
+                id="message"
+                autocomplete="off"
+              ></textarea>
+              <span>Message Me</span>
+              <i class="bottomLine"></i>
+            </div>
+          </div>
+
+          <button type="submit" class="submitBtn">Submit</button>
+        </form>
+      </div>
     </section>
 
     <!-- SECTION Footer -->
