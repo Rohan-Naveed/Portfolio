@@ -45,9 +45,9 @@
   }
 }
 
-@keyframes gradient {
+@keyframes gradientImg {
   0% {
-    background-position: 0% 50%;
+    background-position: 40% 50%;
   }
 
   50% {
@@ -55,7 +55,21 @@
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 40% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 20% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 20% 50%;
   }
 }
 
@@ -93,10 +107,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 :root {
+  --bg-gradient-color: #1b1b1b;
   --bg-color: #080808;
-  --second-bg-color: #131313;
+  --second-bg-color: #111111;
+  --third-bg-color: #0d0d0d;
   --primary-color: #00ffee;
-  --primary-tint-color: #65cfbd;
   --text-color: white;
   --secondary-color: #525151;
 }
@@ -236,7 +251,7 @@ header nav .title:hover .customText {
   height: 87vh;
   background: linear-gradient(
     109.6deg,
-    var(--second-bg-color),
+    var(--bg-gradient-color),
     var(--bg-color),
     var(--bg-color)
   );
@@ -366,6 +381,7 @@ header nav .title:hover .customText {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .contentSection .heroImage img {
@@ -375,12 +391,24 @@ header nav .title:hover .customText {
   object-fit: cover;
   object-position: top;
   transition: 0.25s;
-  box-shadow: 0px 0px 15px var(--primary-color);
+  background: linear-gradient(
+        var(--bg-gradient-color),
+        var(--bg-gradient-color)
+      )
+      padding-box,
+    linear-gradient(140deg, transparent 40%, var(--primary-color), #b911cc)
+      border-box;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  background-size: 300% 100%;
+  animation: gradientImg 5s ease infinite;
+
+  /* box-shadow: 0px 0px 15px var(--primary-color); */
 }
 
 .contentSection .heroImage img:hover {
-  box-shadow: 0px 0px 50px var(--primary-color);
-  border: none;
+  scale: 1.05;
+  box-shadow: 5px 20px 20px -15px var(--primary-color);
 }
 
 .scrollDown {
@@ -595,14 +623,14 @@ header nav .title:hover .customText {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0px 0px 10px -5px var(--text-color);
+  box-shadow: 0px 0px 15px -5px var(--text-color);
   padding: 30px 20px 30px 30px;
   transition: 0.25s;
   border-radius: 20px;
   position: relative;
 }
 
-.resumeSection .resumeFlex .resumeBox .infoBox::after {
+/* .resumeSection .resumeFlex .resumeBox .infoBox::after {
   content: " ";
   position: absolute;
   width: 100%;
@@ -625,7 +653,7 @@ header nav .title:hover .customText {
 .resumeSection .resumeFlex .resumeBox .infoBox::after {
   filter: blur(1rem);
   opacity: 0.4;
-}
+} */
 
 .resumeSection .resumeBox .infoBox:hover::after {
   background-image: conic-gradient(
@@ -715,7 +743,6 @@ header nav .title:hover .customText {
   row-gap: 60px;
   column-gap: 60px;
   box-shadow: 0px 0px 10px -2px var(--primary-color);
-  /* margin-bottom: 20px; */
 }
 
 .projectSection hr {
@@ -765,7 +792,11 @@ header nav .title:hover .customText {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(#212121, #212121) padding-box,
+  background: linear-gradient(
+        var(--bg-gradient-color),
+        var(--bg-gradient-color)
+      )
+      padding-box,
     linear-gradient(140deg, transparent 50%, var(--primary-color), #b911cc)
       border-box;
   border: 2px solid transparent;
@@ -816,7 +847,7 @@ header nav .title:hover .customText {
   padding: 55px 30px 40px 30px;
   background: radial-gradient(
         circle farthest-side at 0% 50%,
-        var(--second-bg-color) 23.5%,
+        var(--third-bg-color) 23.5%,
         rgba(255, 170, 0, 0) 0
       )
       21px 30px,
@@ -827,44 +858,44 @@ header nav .title:hover .customText {
       )
       19px 30px,
     linear-gradient(
-        var(--second-bg-color) 14%,
+        var(--third-bg-color) 14%,
         rgba(240, 166, 17, 0) 0,
         rgba(240, 166, 17, 0) 85%,
-        var(--second-bg-color) 0
+        var(--third-bg-color) 0
       )
       0 0,
     linear-gradient(
         150deg,
-        var(--second-bg-color) 24%,
+        var(--third-bg-color) 24%,
         #2c3539 0,
         #2c3539 26%,
         rgba(240, 166, 17, 0) 0,
         rgba(240, 166, 17, 0) 74%,
         #2c3539 0,
         #2c3539 76%,
-        var(--second-bg-color) 0
+        var(--third-bg-color) 0
       )
       0 0,
     linear-gradient(
         30deg,
-        var(--second-bg-color) 24%,
+        var(--third-bg-color) 24%,
         #2c3539 0,
         #2c3539 26%,
         rgba(240, 166, 17, 0) 0,
         rgba(240, 166, 17, 0) 74%,
         #2c3539 0,
         #2c3539 76%,
-        var(--second-bg-color) 0
+        var(--third-bg-color) 0
       )
       0 0,
     linear-gradient(
         90deg,
         #2c3539 2%,
-        var(--second-bg-color) 0,
-        var(--second-bg-color) 98%,
+        var(--third-bg-color) 0,
+        var(--third-bg-color) 98%,
         #2c3539 0%
       )
-      0 0 var(--second-bg-color);
+      0 0 var(--third-bg-color);
   background-size: 40px 60px;
   box-shadow: 0px 0px 10px -2px var(--primary-color);
 }
@@ -875,7 +906,11 @@ header nav .title:hover .customText {
   margin: auto;
   border-radius: 5%;
 
-  background: linear-gradient(#212121, #212121) padding-box,
+  background: linear-gradient(
+        var(--bg-gradient-color),
+        var(--bg-gradient-color)
+      )
+      padding-box,
     linear-gradient(140deg, transparent 40%, var(--primary-color), #b911cc)
       border-box;
   border: 2px solid transparent;
