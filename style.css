@@ -619,50 +619,31 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex .resumeBox .infoBox {
-  background-color: var(--second-bg-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0px 0px 15px -5px var(--text-color);
   padding: 30px 20px 30px 30px;
   transition: 0.25s;
   border-radius: 20px;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.074);
+  backdrop-filter: blur(20px);
 }
 
-/* .resumeSection .resumeFlex .resumeBox .infoBox::after {
-  content: " ";
+.resumeSection .resumeFlex .resumeBox .infoBox::before {
+  content: "";
+  background-color: #00ffee1c;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 40%,
-    var(--text-color)
-  );
-  border-radius: 20px;
-  padding: 2px;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  animation: movingBorder 2s linear infinite;
-  transition: 0.5s;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 27%;
+  right: 7%;
 }
 
-.resumeSection .resumeFlex .resumeBox .infoBox::after {
-  filter: blur(1rem);
-  opacity: 0.4;
-} */
-
-.resumeSection .resumeBox .infoBox:hover::after {
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 40%,
-    var(--primary-color)
-  );
-  filter: blur(2rem);
-  opacity: 1;
+.resumeSection .resumeFlex .resumeBox .infoBox:hover {
+  box-shadow: 0px 0px 20px 1px #00ffee41;
+  border: 1px solid #00ffee81;
 }
 
 .resumeSection .resumeFlex .skillsBox {
@@ -672,51 +653,43 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex .skillsBox .skills {
-  background-color: var(--second-bg-color);
+  background-color: rgba(255, 255, 255, 0.074);
+  backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px 5px 10px 5px;
-  box-shadow: 0px 0px 10px -5px var(--text-color);
   transition: 0.25s;
   border-radius: 20px;
   position: relative;
 }
 
-.resumeSection .resumeFlex .skillsBox .skills::after {
-  content: " ";
+.resumeSection .resumeFlex .skillsBox .skills::before {
+  content: "";
+  background-color: #00ffee1c;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 50%,
-    var(--text-color)
-  );
-  border-radius: 20px;
-  padding: 2px;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  animation: movingBorder 2s linear infinite;
-  transition: 0.5s;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 7%;
+  left: 5%;
 }
 
 .resumeSection .resumeFlex .skillsBox .skills::after {
-  filter: blur(1rem);
-  opacity: 0.4;
+  content: "";
+  background-color: #00ffee1c;
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 7%;
+  right: 5%;
 }
 
-.resumeSection .resumeFlex .skillsBox .skills:hover::after {
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 50%,
-    var(--primary-color)
-  );
-  filter: blur(2rem);
-  opacity: 1;
+.resumeSection .resumeFlex .skillsBox .skills:hover {
+  box-shadow: 0px 0px 20px 1px #00ffee41;
+  border: 1px solid #00ffee81;
 }
 
 .resumeSection .resumeBtnBox {
@@ -1379,20 +1352,20 @@ footer {
     font-size: 55px;
   }
 
-  .resumeSection .resumeBox .infoBox::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 40%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeBox .infoBox {
+    box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 50%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeFlex .skillsBox .skills {
+    box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills::after,
+  .resumeSection .resumeFlex .skillsBox .skills::before {
+    height: 1rem;
+    width: 1rem;
   }
 
   /* SECTION About */
@@ -1791,6 +1764,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 12px;
+    align-items: center;
+    justify-content: center;
   }
 
   /* SECTION Resume */
@@ -1846,25 +1821,22 @@ footer {
   }
 
   .resumeSection .resumeFlex .skillsBox .skills {
+    /* box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81; */
     border-radius: 10px;
     width: 79px;
     height: 79px;
   }
 
-  .resumeSection .resumeBox .infoBox::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 40%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeFlex .skillsBox .skills::after,
+  .resumeSection .resumeFlex .skillsBox .skills::before {
+    height: 0.7rem;
+    width: 0.7rem;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 50%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeBox .infoBox {
+    box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81;
   }
 
   .resumeBtnBox {
@@ -2275,20 +2247,15 @@ footer {
     height: 75px;
   }
 
-  .resumeSection .resumeBox .infoBox::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 40%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeFlex .skillsBox .skills::after,
+  .resumeSection .resumeFlex .skillsBox .skills::before {
+    height: 0.5rem;
+    width: 0.5rem;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 50%,
-      var(--primary-color)
-    );
+  .resumeSection .resumeBox .infoBox {
+    box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81;
   }
 
   .resumeBtnBox {
