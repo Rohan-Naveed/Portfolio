@@ -165,7 +165,12 @@ header {
   height: 13vh;
   width: 100%;
   padding: 20px 30px;
-  background-color: var(--bg-color);
+  background: linear-gradient(
+    112deg,
+    #02716a10,
+    var(--bg-color),
+    var(--bg-color)
+  );
 }
 
 nav {
@@ -250,8 +255,8 @@ header nav .title:hover .customText {
   padding: 50px 30px 0px 30px;
   height: 87vh;
   background: linear-gradient(
-    109.6deg,
-    var(--bg-gradient-color),
+    112deg,
+    #02716a10,
     var(--bg-color),
     var(--bg-color)
   );
