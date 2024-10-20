@@ -15,12 +15,18 @@ const scrollBtn = document.querySelector(".scrollDown");
 const seeProjectsbtn = document.querySelector(".seeProjectsBtn");
 
 // PreLoader
+// const PreLoaderTimer = window.addEventListener("load", function () {
+//   setTimeout(function () {
+//     preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
+//     body.style.overflowY = "visible";
+//     preLoader.style.display = "none";
+//   }, 2000);
+// });
+
 const PreLoaderTimer = window.addEventListener("load", function () {
-  setTimeout(function () {
-    preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
-    body.style.overflowY = "visible";
-    preLoader.style.display = "none";
-  }, 2000);
+  // preLoadingSec.forEach((sec) => (sec.style.opacity = 1));
+  body.style.overflowY = "visible";
+  preLoader.style.display = "none";
 });
 
 // Reveal section on scroll
