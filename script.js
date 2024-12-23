@@ -48,7 +48,7 @@ allSections.forEach((sec) => sectionObserver.observe(sec));
 
 // Auto Typing
 var typed = new Typed(".typing", {
-  strings: ["Front-End Developer.", "Web Designer.", "Programmer."],
+  strings: ["Full-Stack Developer.", "Web Designer.", "Programmer."],
   typeSpeed: 175,
   backSpeed: 175,
   loop: true,
