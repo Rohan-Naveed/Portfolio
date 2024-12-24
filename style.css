@@ -1293,6 +1293,10 @@ footer {
   .projectSection {
     grid-template-columns: 1fr 1fr;
   }
+  .projectSection .projectFlex img {
+    width: 100%;
+    height: 200px;
+  }
 
   /* SECTION Resume */
 
@@ -1856,7 +1860,7 @@ footer {
 
   .projectSection .projectFlex img {
     width: 100%;
-    height: 150px;
+    height: 200px;
   }
 
   /* SECTION Contact */
@@ -2259,7 +2263,7 @@ footer {
 
   .projectSection .projectFlex img {
     width: 100%;
-    height: 150px;
+    height: 200px;
   }
 
   /* SECTION Contact */
