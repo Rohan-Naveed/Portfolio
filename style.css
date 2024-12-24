@@ -602,9 +602,9 @@ header nav .title:hover .customText {
   font-size: 13px;
 }
 
-.resumeSection .resumeFlex .skillsBox .skills i {
-  font-size: 77px;
-  color: var(--text-color);
+.resumeSection .resumeFlex .skillsBox .skills img {
+  height: 48px;
+  width: 48px;
 }
 
 .resumeSection .resumeFlex {
@@ -1350,8 +1350,9 @@ footer {
     font-size: 12px;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 55px;
+  .resumeSection .resumeFlex .skillsBox .skills img {
+    height: 48px;
+    width: 48px;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills::after,
@@ -1789,8 +1790,9 @@ footer {
     font-size: 11px;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 37px;
+  .resumeSection .resumeFlex .skillsBox .skills img {
+    height: 48px;
+    width: 48px;
   }
 
   .resumeSection {
@@ -2210,8 +2212,9 @@ footer {
     font-size: 10px;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills i {
-    font-size: 35px;
+  .resumeSection .resumeFlex .skillsBox .skills img {
+    height: 48px;
+    width: 48px;
   }
 
   .resumeSection {
