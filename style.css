@@ -1333,10 +1333,9 @@ footer {
     width: 48px;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills::after,
-  .resumeSection .resumeFlex .skillsBox .skills::before {
-    height: 1rem;
-    width: 1rem;
+  .resumeSection .resumeBox .infoBox {
+    box-shadow: 0px 0px 20px 1px #00ffee41;
+    border: 1px solid #00ffee81;
   }
 
   /* SECTION About */
@@ -1800,17 +1799,6 @@ footer {
     height: 79px;
   }
 
-  .resumeSection .resumeFlex .skillsBox .skills::after,
-  .resumeSection .resumeFlex .skillsBox .skills::before {
-    height: 0.7rem;
-    width: 0.7rem;
-  }
-
-  .resumeSection .resumeBox .infoBox {
-    box-shadow: 0px 0px 20px 1px #00ffee41;
-    border: 1px solid #00ffee81;
-  }
-
   .resumeBtnBox {
     display: none;
   }
@@ -2218,17 +2206,6 @@ footer {
     border-radius: 10px;
     width: 75px;
     height: 75px;
-  }
-
-  .resumeSection .resumeFlex .skillsBox .skills::after,
-  .resumeSection .resumeFlex .skillsBox .skills::before {
-    height: 0.5rem;
-    width: 0.5rem;
-  }
-
-  .resumeSection .resumeBox .infoBox {
-    box-shadow: 0px 0px 20px 1px #00ffee41;
-    border: 1px solid #00ffee81;
   }
 
   .resumeBtnBox {
